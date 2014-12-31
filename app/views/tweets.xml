@@ -1,0 +1,9 @@
+<Alloy>
+	<Tab id="tweetsTab" title="Twitter">
+		<Window id="tweetsWindow" title="Tweets">
+			
+			<TableView id="tweetsTable"></TableView>
+
+		</Window>
+	</Tab>
+</Alloy>

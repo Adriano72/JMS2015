@@ -1,0 +1,8 @@
+<Alloy>
+	<Tab id="feedTab" title="Feed">
+		<Window id="feedWindow" title="Live Blog">
+			
+			<WebView id="feedWebView"/>
+		</Window>
+	</Tab>
+</Alloy>
