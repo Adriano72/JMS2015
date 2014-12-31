@@ -1,6 +1,6 @@
 <Alloy>
 	<Tab id="tweetsTab" title="Twitter">
-		<Window id="tweetsWindow" title="Tweets">
+		<Window id="tweetsWindow" class="topBar" title="Tweets">
 			
 			<TableView id="tweetsTable"></TableView>
 

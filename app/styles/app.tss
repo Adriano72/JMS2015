@@ -1,0 +1,33 @@
+".topBar[platform=ios]": {
+	barColor: "#1cc73f",
+	top: Alloy.Globals.winTopHeight,
+	statusBarStyle:Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
+	orientationModes: [Ti.UI.PORTRAIT]
+}
+
+".expoSansPro[platform=ios]": {
+	font: {
+        fontFamily:'ExpoSansPro-Regular',
+        fontSize: '14dp'
+    }
+}
+
+".expoSansProBold[platform=ios]": {
+	font: {
+        fontFamily:'ExpoSansPro-Bold'
+   }
+}
+
+".expoSansPro[platform=android]": {
+	font: {
+        fontFamily:'Expo Sans Pro Regular',
+        fontSize: '14dp'
+    }
+}
+
+".expoSansProBold[platform=android]": {
+	font: {
+        fontFamily:'Expo Sans Pro Bold'
+   }
+}
+

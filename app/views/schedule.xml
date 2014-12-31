@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab id="scheduleTab" title="Schedule">
+		<Window id="scheduleWindow" class="topBar" title="Schedule">
+			
+		</Window>
+	</Tab>
+</Alloy>

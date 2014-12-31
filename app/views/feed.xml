@@ -1,6 +1,6 @@
 <Alloy>
 	<Tab id="feedTab" title="Feed">
-		<Window id="feedWindow" title="Live Blog">
+		<Window id="feedWindow" class="topBar" title="JMS 2015 Live Blog" onOpen="doOpen">
 			
 			<WebView id="feedWebView"/>
 		</Window>

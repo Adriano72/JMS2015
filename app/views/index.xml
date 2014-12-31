@@ -2,5 +2,8 @@
 	<TabGroup id="tabGroup">
 		<Require id="feedController" src="feed"/>
 		<Require id="tweetsController" src="tweets"/>
+		<Require id="locationController" src="location"/>
+		<Require id="speakersController" src="speakers"/>
+		<Require id="scheduleController" src="schedule"/>
 	</TabGroup>
 </Alloy>

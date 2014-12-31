@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab id="speakersTab" title="Speakers">
+		<Window id="speakersWindow" class="topBar" title="Speakers">
+			
+		</Window>
+	</Tab>
+</Alloy>

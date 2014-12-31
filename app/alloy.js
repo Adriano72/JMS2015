@@ -9,3 +9,16 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+Alloy.Globals.Map = require('ti.map');
+
+if (OS_ANDROID) {
+	var abx = require('com.alcoapps.actionbarextras');
+}
+
+if (Ti.Platform.version < 7) {
+	Alloy.Globals.winTopHeight = 20;
+} else {
+	Alloy.Globals.winTopHeight = 0;
+};
+
