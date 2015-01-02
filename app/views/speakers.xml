@@ -1,7 +1,10 @@
 <Alloy>
 	<Tab id="speakersTab" title="Speakers">
-		<Window id="speakersWindow" class="topBar" title="Speakers">
-			
+		<Window id="speakersWindow" class="topBar" title="The John Main Seminar 2015" onOpen="doOpen">
+			<TitleControl platform="ios">
+				<Label class="titolo">The John Main Seminar 2015</Label>
+			</TitleControl>
+			<TableView id="speakersTable"></TableView>
 		</Window>
 	</Tab>
 </Alloy>

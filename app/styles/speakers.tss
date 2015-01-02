@@ -1,0 +1,8 @@
+"#speakersWindow":{
+	backgroundColor: "#EEEEEE"
+}
+
+"#speakersTable": {
+	top: 10,
+	backgroundColor: "#EEEEEE"
+}

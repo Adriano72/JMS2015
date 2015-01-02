@@ -41,8 +41,8 @@
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest android:installLocation="preferExternal"
             android:versionCode="1" android:versionName="1.0.0" package="it.adrianomassi.jms2015">
-            <!--<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="18"/>-->
-            <uses-sdk android:targetSdkVersion="19"/>
+            <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
+            <!--<uses-sdk android:targetSdkVersion="19"/>-->
             <supports-screens android:anyDensity="true"/>
             <!-- Allows the API to download data from Google Map servers -->
             <uses-permission android:name="android.permission.INTERNET"/>

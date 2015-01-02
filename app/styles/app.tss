@@ -5,10 +5,10 @@
 	orientationModes: [Ti.UI.PORTRAIT]
 }
 
+
 ".expoSansPro[platform=ios]": {
 	font: {
-        fontFamily:'ExpoSansPro-Regular',
-        fontSize: '14dp'
+        fontFamily:'ExpoSansPro-Regular'
     }
 }
 
@@ -18,10 +18,21 @@
    }
 }
 
+"Label[platform=android]":{
+	font: {
+        fontFamily:'Expo Sans Pro Regular'
+    }
+}
+
+"Label[platform=ios]":{
+	font: {
+        fontFamily:'ExpoSansPro-Regular'
+    }
+}
+
 ".expoSansPro[platform=android]": {
 	font: {
-        fontFamily:'Expo Sans Pro Regular',
-        fontSize: '14dp'
+        fontFamily:'Expo Sans Pro Regular'
     }
 }
 
@@ -29,5 +40,15 @@
 	font: {
         fontFamily:'Expo Sans Pro Bold'
    }
+}
+
+".titolo": {
+	height: "100%",
+	width: Ti.UI.SIZE,
+	font: {
+        fontFamily:'ExpoSansPro-Regular',
+        fontSize: '16dp'
+   },
+   color: "#204000"
 }
 
