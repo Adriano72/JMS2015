@@ -1,10 +1,12 @@
 <Alloy>
-	<Tab id="feedTab" title="Live Blog">
+	<Tab id="feedTab" title=" Live Blog ">
 		<Window id="feedWindow" class="topBar" title="JMS 2015 Live Blog" onOpen="doOpen">
 			<TitleControl platform="ios">
 				<Label class="titolo">The John Main Seminar 2015</Label>
 			</TitleControl>
-			
+			<LeftNavButton platform="ios">
+				<ImageView class="leftNavImg"/>
+			</LeftNavButton>
 			<WebView id="feedWebView"/>
 		</Window>
 	</Tab>

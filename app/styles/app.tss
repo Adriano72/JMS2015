@@ -5,6 +5,10 @@
 	orientationModes: [Ti.UI.PORTRAIT]
 }
 
+".leftNavImg": {
+	image: "/images/doves_black_transparentbg_web.png",
+	height: 30
+}
 
 ".expoSansPro[platform=ios]": {
 	font: {

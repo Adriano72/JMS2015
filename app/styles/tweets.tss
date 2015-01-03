@@ -2,3 +2,7 @@
 "#tweetsTable": {
 	minRowHeight: 58
 }
+
+"#tweetsTab": {
+	icon: "/images/twitter.png"
+}

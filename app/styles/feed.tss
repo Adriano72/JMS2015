@@ -6,3 +6,7 @@
 }
 
 
+"#feedTab": {
+	icon: "/images/microphone.png"
+}
+

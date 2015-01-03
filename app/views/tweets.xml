@@ -1,9 +1,12 @@
 <Alloy>
-	<Tab id="tweetsTab" title="Twitter">
+	<Tab id="tweetsTab" title=" Twitter ">
 		<Window id="tweetsWindow" class="topBar" title="Tweets" onOpen="doOpen">
 			<TitleControl platform="ios">
 				<Label class="titolo">The John Main Seminar 2015</Label>
 			</TitleControl>
+			<LeftNavButton platform="ios">
+				<ImageView class="leftNavImg"/>
+			</LeftNavButton>
 			<TableView id="tweetsTable"></TableView>
 
 		</Window>

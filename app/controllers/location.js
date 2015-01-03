@@ -18,4 +18,13 @@ function selectAnnot(){
 }
 
 
+function openNavigation(e) {
+
+	require('locationServices').getUserLocation(function(userLoc) {
+		var mapsServiceURL = (OS_ANDROID) ? 'http://maps.google.com/maps?t=m&saddr=' : 'http://maps.apple.com/maps?t=m&saddr=';
+		//Ti.API.info("NAVIGATION DATA: " + e.source.lat + " " + e.source.lon + " " + userLoc.latitude + " " + userLoc.longitude);
+		Ti.Platform.openURL(mapsServiceURL + userLoc.latitude + ',' + userLoc.longitude + '&daddr=-37.788202,175.311180');
+	});
+
+};
 

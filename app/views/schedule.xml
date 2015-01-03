@@ -1,9 +1,12 @@
 <Alloy>
-	<Tab id="scheduleTab" title="Schedule">
+	<Tab id="scheduleTab" title=" Schedule ">
 		<Window id="scheduleWindow" class="topBar" title="Schedule" onOpen="doOpen">
 			<TitleControl platform="ios">
 				<Label class="titolo">The John Main Seminar 2015</Label>
 			</TitleControl>
+			<LeftNavButton platform="ios">
+				<ImageView class="leftNavImg"/>
+			</LeftNavButton>
 		</Window>
 	</Tab>
 </Alloy>

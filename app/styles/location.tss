@@ -15,3 +15,13 @@
 	subtitle: "Gate 1, 106/110 Knighton Rd",
 	pincolor: Alloy.Globals.Map.ANNOTATION_GREEN
 }
+
+"#locationTab": {
+	icon: "/images/map-location.png"
+}
+
+".openNavImg": {
+	image: "/images/location.png",
+	height: 30
+}
+
