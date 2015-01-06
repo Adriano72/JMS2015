@@ -7,6 +7,9 @@
 			<LeftNavButton platform="ios">
 				<ImageView class="leftNavImg"/>
 			</LeftNavButton>
+			<RightNavButton platform="ios">
+				<ImageView class="refreshBlog" onClick="refreshLiveBlog"/>
+			</RightNavButton>
 			<WebView id="feedWebView"/>
 		</Window>
 	</Tab>

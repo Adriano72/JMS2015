@@ -35,12 +35,17 @@
                 <false/>
                 <key>UIStatusBarStyle</key>
                 <string>UIStatusBarStyleDefault</string>
+                <key>NSLocationWhenInUseUsageDescription</key>
+                <string>
+                    Get user position to calculate the route to the relevant place
+                </string>
             </dict>
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest android:installLocation="preferExternal"
             android:versionCode="1" android:versionName="1.0.0" package="it.adrianomassi.jms2015">
+            
             <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
             <!--<uses-sdk android:targetSdkVersion="19"/>-->
             <supports-screens android:anyDensity="true"/>

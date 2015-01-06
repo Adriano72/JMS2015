@@ -1,9 +1,9 @@
 exports.getUserLocation = function(_callback) {
 	
-	/*
+	
 	
 	if (Ti.Geolocation.locationServicesEnabled) {
-		Ti.Geolocation.purpose = 'Fornire informazioni rilevanti alla posizione dell\'utente';
+		Ti.Geolocation.purpose = 'Get user position to calculate the route to the relevant place';
 		Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
 		Ti.Geolocation.distanceFilter = 10;
 		Ti.Geolocation.preferredProvider = Ti.Geolocation.PROVIDER_GPS;
@@ -19,7 +19,7 @@ exports.getUserLocation = function(_callback) {
 		 longitude : e.coords.longitude
 		 };
 
-		 Ti.API.info("COORDINATE UTENTE: " + JSON.stringify(position));
+		 //Ti.API.info("COORDINATE UTENTE: " + JSON.stringify(position));
 		 Alloy.Globals.userPosition = position;
 
 		 _callback(position);
@@ -29,15 +29,16 @@ exports.getUserLocation = function(_callback) {
 		 
 
 	} else {
-		alert('Abilitare i servizi di localizzazione per usufruire del servizio');
+		alert('Location services are not enabled on this device');
 	}
-	*/
-
 	
+
+	/*
 	var position = {
 		latitude : -37.800777,
 		longitude : 175.320038
 	};
+	*/
 	
 	/*
 	var position = {
@@ -48,10 +49,10 @@ exports.getUserLocation = function(_callback) {
 	
 	
 
-	Ti.API.info("COORDINATE UTENTE: " + JSON.stringify(position));
-	Alloy.Globals.userPosition = position;
+	//Ti.API.info("COORDINATE UTENTE: " + JSON.stringify(position));
+	//Alloy.Globals.userPosition = position;
 
-	_callback(position);
+	//_callback(position);
 	
 	
 	

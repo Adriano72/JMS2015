@@ -7,7 +7,9 @@
 			<LeftNavButton platform="ios">
 				<ImageView class="leftNavImg"/>
 			</LeftNavButton>
-			<TableView id="tweetsTable"></TableView>
+			<TableView id="tweetsTable">
+				<RefreshControl id="refresh" onRefreshstart="reloadData" platform="ios"/>
+			</TableView>
 
 		</Window>
 	</Tab>

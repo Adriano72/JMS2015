@@ -1,6 +1,6 @@
 <Alloy>
 
-	<TableViewRow id="riga" class="row">
+	<TableViewRow id="riga" class="row" onClick="goToURL">
 
 		<View id="post_view">
 			<ImageView id="av"/>

@@ -78,7 +78,7 @@
 	width: Ti.UI.FILL,
 	color: "#00661A",
 	font: {
-        fontSize: '10dp'
+        fontSize: '12dp'
     }
 	
 }
@@ -88,7 +88,7 @@
 	height: Ti.UI.SIZE,
 	width: Ti.UI.FILL,
 	font: {
-        fontSize: '10dp'
+        fontSize: '12dp'
     }
 }
 
@@ -97,7 +97,7 @@
 	height: Ti.UI.SIZE,
 	width: Ti.UI.FILL,
 	font: {
-        fontSize: '12dp'
+        fontSize: '14dp'
     }
 }
 

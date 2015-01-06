@@ -12,4 +12,12 @@ function doOpen(evt) {
 		//actionBarHelper.setIcon('/drawericonw@2x.png');
 
 	}
+	
+	
 }
+
+function refreshLiveBlog(){
+	$.feedWebView.reload();
+}
+
+

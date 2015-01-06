@@ -16,6 +16,8 @@ function doOpen(evt) {
 		//actionBarHelper.setIcon('/drawericonw@2x.png');
 
 	}
+
+	loadData();
 }
 
 function strtotime(str, now) {
@@ -207,50 +209,62 @@ function prettyDate(time) {
 }
 
 // set up a twitter screen name.
-var screen_name = '%23superbowl';
+var screen_name = '%23JMS2015';
 
+function loadData() {
+	// create table view data object
+	var rows = [];
 
-// create table view data object
-var rows = [];
+	var xhr = Ti.Network.createHTTPClient();
+	xhr.timeout = 1000000;
 
-var xhr = Ti.Network.createHTTPClient();
-xhr.timeout = 1000000;
+	var bearerToken = "AAAAAAAAAAAAAAAAAAAAAEHKSgAAAAAAKzh8n7rBx8SsTJECCkRlVHW%2FlG8%3DvVgRTmoK6wDp1DEw9GZMShZcdCgDcd4CgwvBbzrgbk";
 
-var bearerToken = "AAAAAAAAAAAAAAAAAAAAAEHKSgAAAAAAKzh8n7rBx8SsTJECCkRlVHW%2FlG8%3DvVgRTmoK6wDp1DEw9GZMShZcdCgDcd4CgwvBbzrgbk";
+	//https://api.twitter.com/1.1/search/tweets.json?q=%23superbowl&result_type=recent
+	xhr.open("GET", "https://api.twitter.com/1.1/search/tweets.json?q=" + screen_name + "&result_type=recent");
+	//xhr.open("GET", "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + screen_name);
 
-//https://api.twitter.com/1.1/search/tweets.json?q=%23superbowl&result_type=recent
-xhr.open("GET", "https://api.twitter.com/1.1/search/tweets.json?q="+screen_name+"&result_type=recent");
-//xhr.open("GET", "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + screen_name);
+	xhr.setRequestHeader("Authorization", "Bearer " + bearerToken);
 
-xhr.setRequestHeader("Authorization", "Bearer " + bearerToken);
+	xhr.onload = function() {
+		try {
+			//Ti.API.info("TWITTER RESPONSE: "+this.responseText);
+			var tweets = JSON.parse(this.responseText);
+			//Ti.API.info("TWEET: " + JSON.stringify(tweets[0]));
 
-Ti.API.info("TWITTER RESPONSE: "+this.responseText);
+			_.each(tweets.statuses, function(value) {
+				//Ti.API.info("DATA: " + value.img);
+				var riga = Alloy.createController('tweetRow', {
 
-xhr.onload = function() {
-	try {
-		var tweets = JSON.parse(this.responseText);
-		Ti.API.info("TWEET: " + JSON.stringify(tweets[0]));
+					tweet : value.text,
+					user : value.user.screen_name,
+					avatar : value.user.profile_image_url,
+					created_at : prettyDate(strtotime(value.created_at)),
+					first_url : value.entities.urls[0].expanded_url
 
-		_.each(tweets.statuses, function(value) {
-			//Ti.API.info("DATA: " + value.img);
-			var riga = Alloy.createController('tweetRow', {
+				}).getView();
+				rows.push(riga);
+			});
 
-				tweet : value.text,
-				user : value.user.screen_name,
-				avatar : value.user.profile_image_url,
-				created_at : prettyDate(strtotime(value.created_at))
+			$.tweetsTable.setData(rows);
+			//Ti.UI.currentWindow.add(tableview);
+			//win.add(tableview);
+		} catch(E) {
+			alert(E);
+		}
+	};
 
-			}).getView();
-			rows.push(riga);
-		});
+	xhr.send();
+}
 
-		
-		 $.tweetsTable.setData(rows);
-		//Ti.UI.currentWindow.add(tableview);
-		//win.add(tableview);
-	} catch(E) {
-		alert(E);
+function reloadData() {
+
+	if (OS_IOS) {
+		setTimeout(function() {
+			//Ti.API.debug('Timeout');
+			loadData();
+			$.refresh.endRefreshing();
+		}, 2000);
 	}
-};
 
-xhr.send();
+}
